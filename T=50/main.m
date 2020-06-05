@@ -5,7 +5,7 @@ warning('off');
 tic;
 % reliability plot
 d=5; % how many assets
-m=100; % cap for values of asset
+m=10; % cap for values of asset
 T=50; % length of each xi^(i)
 N_sample=10; %smoothing parameter
 
