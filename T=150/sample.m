@@ -1,19 +1,17 @@
 function val = sample(alpha0,r,q,d)
-% alpha0=alpha0(:,:,1);
-% d=4;
-% q=q(:,:,1);
+
 p=q;
 N_samples = 10^7;
 for n=1:N_samples
     fprintf('sample order %d',n);
     % randomly sample p
     if r>=0.8
-        p=rand(d);
-%         for j=1:d
-%             for k=1:d
-%             p(j,k) = max(q(j,k)+r*rand-0.5*r,0.000001); 
-%             end
-%         end
+%         p=rand(d);
+        for j=1:d
+            for k=1:d
+            p(j,k) = max(q(j,k)+r*rand-0.5*r,0.000001); 
+            end
+        end
     elseif r>=0.1
         for j=1:d
         for k=1:d
